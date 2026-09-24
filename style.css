@@ -1,0 +1,529 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+
+    min-height: 100vh;
+
+    background-color: #02030a;
+
+    background-image:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(0, 110, 255, 0.6),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 50, 255, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 65% 80%,
+            rgba(0, 120, 255, 0.3),
+            transparent 30%
+        );
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    font-family: cursive;
+
+    overflow-x: hidden;
+}
+
+
+
+
+.div {
+
+    width: min(600px, 90%);
+
+    min-height: 100px;
+
+    margin: 25px auto;
+
+    padding: 15px;
+
+    background: rgba(0, 30, 100, 0.25);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border: 2px solid rgba(230, 250, 52, 0.974);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-shadow:
+        0 2px 10px yellow;
+
+}
+
+
+
+.title {
+
+    font-size: clamp(38px, 7vw, 64px);
+
+    color: rgba(230, 250, 52, 0.974);
+
+    text-shadow:
+        0 3px 5px rgba(236, 241, 197, 0.71);
+
+    margin-top: 20px;
+
+    text-align: center;
+
+}
+
+
+
+textarea {
+
+    width: min(500px, 90%);
+
+    min-height: 50px;
+
+    margin: 12px auto 0;
+
+    padding: 12px 14px;
+
+    display: block;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(221, 244, 90, 0.76);
+
+    outline: none;
+
+    background: #07111d67;
+
+    color: #f9e939;
+
+    font-family: cursive;
+
+    font-size: 14px;
+
+    resize: none;
+
+    text-align: left;
+
+}
+
+
+textarea::placeholder {
+
+    color: #526878;
+
+}
+
+
+textarea:focus {
+
+    border-color: #ffea4f;
+
+    box-shadow:
+        0 0 0 3px rgba(70, 180, 255, 0.08),
+        0 0 20px rgba(0, 140, 255, 0.08);
+
+}
+
+
+
+.camera-card {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: rgba(7, 20, 34, 0.88);
+
+    border: 1px solid rgba(243, 255, 70, 0.8);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(0, 130, 255, 0.07);
+
+}
+
+
+
+.camera-card h4 {
+
+    margin: 0 0 15px;
+
+    text-align: center;
+
+    color: #dff4ff;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+}
+
+
+.camera-card h4::after {
+
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 2px;
+
+    margin: 8px auto 0;
+
+    border-radius: 5px;
+
+    background: #42baff;
+
+}
+
+
+
+#video,
+#img1 {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    min-height: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background: #030912;
+
+}
+
+
+#video {
+
+    border: 1px solid #e1ff36;
+
+}
+
+
+
+#img1 {
+
+    border: 1px solid #fffc66;
+
+}
+
+
+
+#video video {
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+#video canvas {
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+
+#img1 img {
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+
+.boxx {
+
+    width: min(500px, 90%);
+
+    margin: 25px auto;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: rgba(8, 22, 37, 0.9);
+
+    border: 1px solid rgba(255, 255, 80, 0.95);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(0, 140, 255, 0.08);
+
+}
+
+
+
+.boxx h5 {
+
+    margin: 12px 0 0;
+
+    color: #73cfff;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+button {
+
+    padding: 11px 45px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #fff242;
+
+    color: #04101b;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 6px 20px rgba(50, 180, 255, 0.18);
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(1, 9, 54, 0.3);
+
+}
+
+
+button:active {
+
+    transform: translateY(1px);
+
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    .div {
+
+        width: 92%;
+
+        min-height: 80px;
+
+        margin: 18px auto;
+
+        padding: 10px;
+
+    }
+
+
+    .title {
+
+        font-size: 40px;
+
+    }
+
+
+    textarea {
+
+        width: 92%;
+
+        font-size: 13px;
+
+    }
+
+
+    .camera-card {
+
+        padding: 12px;
+
+    }
+
+
+    .camera-card h4 {
+
+        font-size: 16px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    #video,
+    #img1 {
+
+        width: 100%;
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+
+    .boxx {
+
+        width: 92%;
+
+        padding: 15px;
+
+    }
+
+
+    button {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        padding: 11px 25px;
+
+    }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .div {
+
+        width: 85%;
+
+    }
+
+
+    .camera-card {
+
+        padding: 15px;
+
+    }
+
+
+    #video,
+    #img1 {
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .div {
+
+        width: 600px;
+
+    }
+
+
+    .camera-card {
+
+        padding: 18px;
+
+    }
+
+
+    #video,
+    #img1 {
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+    .camera-card {
+
+        padding: 20px;
+
+    }
+
+
+    #video,
+    #img1 {
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+} 
